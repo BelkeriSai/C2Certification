@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b103"
+ majorVersion="8"
+ minorVersion="5"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="5"
+ schemaVersion="1054"
+ universal="password">
+    <Things>
+        <Thing
+         description=""
+         documentationContent=""
+         effectiveThingPackage="ConfiguredThing"
+         enabled="true"
+         homeMashup=""
+         identifier=""
+         name="UserManagementHelper_Thing"
+         projectName="PracticalExamProject"
+         published="false"
+         tags="PracticalExamProject_Tag:UtilEntities;PracticalExamProject_Tag:local"
+         thingTemplate="GenericThing"
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.dataShape="UserRoles.DS"
+                     aspect.isPersistent="true"
+                     baseType="INFOTABLE"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="userRoles"
+                     ordinal="2"></PropertyDefinition>
+                </PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="BuildingViewPermissions">
+                        <ResultType
+                         aspect.dataShape="BuildingViewPermissions.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="CreateOrganizations">
+                        <ResultType
+                         baseType="NOTHING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.isRequired="true"
+                             baseType="STRING"
+                             description=""
+                             name="OrgName"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="CreateUserGroup">
+                        <ResultType
+                         baseType="BOOLEAN"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="CreateUsers">
+                        <ResultType
+                         baseType="NOTHING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="BuildingViewPermissions">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // result: INFOTABLE
+                                        var currentUserExtensions = Resources["CurrentSessionInfo"].GetCurrentUserExtensionProperties();
+                                        
+                                        
+                                        var params = {
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "BuildingViewPermissions.DS"
+                                        };
+                                        
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(BuildingViewPermissions.DS)
+                                        var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                        
+                                        // result: INFOTABLE dataShape: EntityList
+                                        var currentUserGroups = Resources["CurrentSessionInfo"].GetCurrentUserGroups();
+                                        var newRow = new Object();
+                                        for (s = 0; s < currentUserGroups.length; s++) {
+                                        	if (currentUserGroups.rows[s].name === "SCSB_AppAdmin") {
+                                        		newRow.visibility = true;
+                                        		break;
+                                        	} else {
+                                        		newRow.contractName = currentUserExtensions.contractName;
+                                        		newRow.visibility = false;
+                                        	}
+                                        }
+                                        result.AddRow(newRow);
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="CreateOrganizations">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        try {
+                                            var orgNameInput = OrgName.split(" ").join("");
+                                            Resources["EntityServices"].CreateOrganization({
+                                                topOUName: orgNameInput,
+                                                name: orgNameInput
+                                            });
+                                                Organizations[orgNameInput].SetProjectName({
+                                                projectName: "PracticalExamProject" /* PROJECTNAME */
+                                            });
+                                            var contractList = Things["UtilHelperThing"].contractDetails;
+                                           
+                                            for (var x = 0; x < contractList.length; x++) {
+                                                var contractName = contractList.rows[x].ContractName;
+                                                var params = {
+                                                    name: contractName,
+                                                    parentName: orgNameInput
+                                                };
+                                                Organizations[orgNameInput].AddOrganizationalUnit(params);
+                                            }
+                                        } catch (err) {
+                                          logger.error("Service error in CreateOrganization in " + me.name + " at " + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="CreateUserGroup">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        try {
+                                        	var userRoles = me.userRoles;
+                                        	var organizationName = Things["UtilHelperThing"].contractDetails;
+                                        	for (h = 0; h < organizationName.length; h++) {
+                                        		for (i = 0; i < userRoles.length; i++) {
+                                                    Resources["EntityServices"].CreateGroup({
+                                        				name: organizationName.rows[h].ContractName + userRoles.rows[i].userRoles /* STRING */ ,
+                                        				description: userRoles.rows[i].userRoles + " User Group for " + organizationName.rows[h].ContractName + " Contract" /* STRING */ ,
+                                        				tags: undefined /* TAGS */
+                                        			});
+                                        			Groups[organizationName.rows[h].ContractName + userRoles.rows[i].userRoles].SetProjectName({
+                                        				projectName: "PracticalExamProject" /* PROJECTNAME */
+                                        			});
+                                        		}
+                                        	}
+                                        	result = true;
+                                        } catch (err) {
+                                        	result = false;
+                                        	logger.error("Service error in CreateUserGroups in " + me.name + " at " + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="CreateUsers">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        try {
+                                        	var userRoles = me.userRoles;
+                                        	var organizationName = Things["UtilHelperThing"].contractDetails;
+                                        	for (h = 0; h < organizationName.length; h++) {
+                                        		for (i = 0; i < userRoles.length; i++) {
+                                                    var Username = organizationName.rows[h].ContractName + userRoles.rows[i].userRoles;
+                                                    var Password = "qawsedrftg";
+                                        			if (!Users[Username]) {
+                                        				Resources["EntityServices"].CreateUser({
+                                        					name: Username /* STRING */ ,
+                                        					description: "SCSB User" /* STRING */ ,
+                                        					tags: undefined /* TAGS */ ,
+                                        					password: Password /* STRING */
+                                        				});
+                                        				Users[Username].EnableUser();
+                                        				Users[Username].contractName = organizationName.rows[h].ContractName;
+                                        			}
+                                        			Users[Username].SetProjectName({
+                                        				projectName: "PracticalExamProject" /* PROJECTNAME */
+                                        			});
+                                                    Groups[organizationName.rows[h].ContractName + userRoles.rows[i].userRoles].AddMember({
+                                                        member: Username,
+                                                        type: 'User'
+                                                    });
+                                        
+                                        		}
+                                        	}
+                                        } catch (err) {
+                                        	logger.error("Service error in CreateUsers in " + me.name + " at " + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations>
+                <AlertDefinitions
+                 name="userRoles"></AlertDefinitions>
+            </AlertConfigurations>
+            <ImplementedShapes></ImplementedShapes>
+            <ThingProperties>
+                <userRoles>
+                    <Value>
+                        <infoTable>
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition
+                                     aspect.isPrimaryKey="false"
+                                     baseType="STRING"
+                                     description=""
+                                     name="userRoles"
+                                     ordinal="1"></FieldDefinition>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <userRoles>
+                                    <![CDATA[
+                                    ClientAdmin
+                                    ]]>
+                                    </userRoles>
+                                </Row>
+                                <Row>
+                                    <userRoles>
+                                    <![CDATA[
+                                    VegetablesRoomManager
+                                    ]]>
+                                    </userRoles>
+                                </Row>
+                                <Row>
+                                    <userRoles>
+                                    <![CDATA[
+                                    FruitsRoomManager
+                                    ]]>
+                                    </userRoles>
+                                </Row>
+                                <Row>
+                                    <userRoles>
+                                    <![CDATA[
+                                    MeatRoomManager
+                                    ]]>
+                                    </userRoles>
+                                </Row>
+                            </Rows>
+                        </infoTable>
+                    </Value>
+                    <Timestamp>2020-06-11T08:31:29.093Z</Timestamp>
+                    <Quality>GOOD</Quality>
+                </userRoles>
+            </ThingProperties>
+        </Thing>
+    </Things>
+</Entities>

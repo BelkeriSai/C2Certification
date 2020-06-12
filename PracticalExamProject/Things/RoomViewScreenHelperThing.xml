@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b103"
+ majorVersion="8"
+ minorVersion="5"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="5"
+ schemaVersion="1054"
+ universal="password">
+    <Things>
+        <Thing
+         description=""
+         documentationContent=""
+         effectiveThingPackage="ConfiguredThing"
+         enabled="true"
+         homeMashup=""
+         identifier=""
+         name="RoomViewScreenHelperThing"
+         projectName="PracticalExamProject"
+         published="false"
+         tags="PracticalExamProject_Tag:MashupHelperThings"
+         thingTemplate="GenericThing"
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetCurrentRoomWeatherInfo">
+                        <ResultType
+                         aspect.dataShape="CurrentWeather.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="contractName"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="location"
+                             ordinal="5"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="roomSize"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="roomType"
+                             ordinal="2"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetHistoricalBuildingWeatherInfo">
+                        <ResultType
+                         aspect.dataShape="HistoricalWeather.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="DATETIME"
+                             description=""
+                             name="enddate"
+                             ordinal="6"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="location"
+                             ordinal="5"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="DATETIME"
+                             description=""
+                             name="startdate"
+                             ordinal="5"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetHistoricalRoomWeatherInfo">
+                        <ResultType
+                         aspect.dataShape="HistoricalWeather.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="contractName"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="DATETIME"
+                             description=""
+                             name="enddate"
+                             ordinal="6"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="location"
+                             ordinal="5"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="roomSize"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="roomType"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="DATETIME"
+                             description=""
+                             name="startdate"
+                             ordinal="5"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetRoomDataforGrid">
+                        <ResultType
+                         aspect.dataShape="RoomViewGrid.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="contractName"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="location"
+                             ordinal="5"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="roomSize"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="roomType"
+                             ordinal="2"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetRoomThingNameandDetails">
+                        <ResultType
+                         baseType="NOTHING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="contractName"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="location"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="roomSize"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="roomType"
+                             ordinal="2"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetRoomTypesList">
+                        <ResultType
+                         aspect.dataShape="roomSizes.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetCurrentRoomWeatherInfo">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        try {
+                                        	var thingName = contractName + location + roomType + roomSize;
+                                        
+                                        	// result: INFOTABLE dataShape: ""
+                                        	var thingValues = Things[thingName].GetPropertyValues();
+                                        
+                                        	var params = {
+                                        		infoTableName: "InfoTable",
+                                        		dataShapeName: "CurrentWeather.DS"
+                                        	};
+                                        
+                                        	// CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(CurrentWeather.DS)
+                                        	var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                        
+                                        	var newRow = new Object();
+                                        
+                                        	newRow.Temperature = thingValues.rows[0].temperature;
+                                        	newRow.Humidity = thingValues.rows[0].humidity;
+                                        	result.AddRow(newRow);
+                                        } catch (ex) {
+                                        	logger.error("ERROR in GetCurrentRoomWeatherInfo : " + me.name + " at line " + ex.lineNumber + " : " + ex);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetHistoricalBuildingWeatherInfo">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        try {
+                                        	// result: INFOTABLE dataShape: ""
+                                        	var thingValues = Things["Weather"+location].QueryPropertyHistory({
+                                        		oldestFirst: undefined /* BOOLEAN */ ,
+                                        		maxItems: 500 /* NUMBER */ ,
+                                        		endDate: enddate /* DATETIME */ ,
+                                        		query: undefined /* QUERY */ ,
+                                        		startDate: startdate /* DATETIME */
+                                        	});
+                                        
+                                        	var params = {
+                                        		infoTableName: "InfoTable",
+                                        		dataShapeName: "HistoricalWeather.DS"
+                                        	};
+                                        
+                                        	// CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(HistoricalWeather.DS)
+                                        	var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                        	var newRow = new Object();
+                                        	for (i = 0; i < thingValues.length; i++) {
+                                        		newRow.temperature = thingValues.rows[i].temperature;
+                                        		newRow.humidity = thingValues.rows[i].humidity;
+                                        		newRow.timeStamp = thingValues.rows[i].timestamp;
+                                        		result.AddRow(newRow);
+                                        	}
+                                        } catch (ex) {
+                                        	logger.error("ERROR in GetHistoricalBuildingWeatherInfo : " + me.name + " at line " + ex.lineNumber + " : " + ex);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetHistoricalRoomWeatherInfo">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        try {
+                                        	var thingName = contractName + location + roomType + roomSize;
+                                        
+                                        	// result: INFOTABLE dataShape: ""
+                                        	var thingValues = Things[thingName].QueryPropertyHistory({
+                                        		oldestFirst: undefined /* BOOLEAN */ ,
+                                        		maxItems: 500 /* NUMBER */ ,
+                                        		endDate: enddate /* DATETIME */ ,
+                                        		query: undefined /* QUERY */ ,
+                                        		startDate: startdate /* DATETIME */
+                                        	});
+                                        
+                                        	var params = {
+                                        		infoTableName: "InfoTable",
+                                        		dataShapeName: "HistoricalWeather.DS"
+                                        	};
+                                        
+                                        	// CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(HistoricalWeather.DS)
+                                        	var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                        	var newRow = new Object();
+                                        	for (i = 0; i < thingValues.length; i++) {
+                                        		newRow.temperature = thingValues.rows[i].temperature;
+                                        		newRow.humidity = thingValues.rows[i].humidity;
+                                        		newRow.timeStamp = thingValues.rows[i].timestamp;
+                                        		result.AddRow(newRow);
+                                        	}
+                                        } catch (ex) {
+                                        	logger.error("ERROR in GetHistoricalRoomWeatherInfo : " + me.name + " at line " + ex.lineNumber + " : " + ex);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetRoomDataforGrid">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        try {
+                                        	var params = {
+                                        		infoTableName: "InfoTable",
+                                        		dataShapeName: "RoomViewGrid.DS"
+                                        	};
+                                        	// CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(RoomViewGrid.DS)
+                                        	var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                        
+                                        
+                                        
+                                        	var thingName = contractName + location + roomType + roomSize;
+                                        
+                                        
+                                        
+                                        	var Fruits = ["pear", "peach", "banana", "orange", "apple"];
+                                        	var Vegetables = ["salad", "tomato", "potato", "carrot", "onion"];
+                                        	var Meat = ["chicken", "fish", "lamb", "pig", "beef"];
+                                        
+                                        
+                                        
+                                        	var thingValues = Things[thingName].GetPropertyValuesAsMultiRowTable();
+                                        
+                                        
+                                        
+                                        	var newRow = new Object();
+                                        	if (roomType == "Vegetables") {
+                                        		for (i = 0; i < thingValues.length; i++) {
+                                        			if (Vegetables.indexOf(thingValues.rows[i].name) >= 0) {
+                                        				newRow.itemName = thingValues.rows[i].name;
+                                        				newRow.currentQuantity = thingValues.rows[i].value;
+                                        				newRow.maxQuantity = 700;
+                                        				result.AddRow(newRow);
+                                        			}
+                                        		}
+                                        	} else if (roomType == "Fruits") {
+                                        		for (i = 0; i < thingValues.length; i++) {
+                                        			if (Fruits.indexOf(thingValues.rows[i].name) >= 0) {
+                                        				newRow.itemName = thingValues.rows[i].name;
+                                        				newRow.currentQuantity = thingValues.rows[i].value;
+                                        				newRow.maxQuantity = 800;
+                                        				result.AddRow(newRow);
+                                        			}
+                                        		}
+                                        	} else if (roomType == "Meat") {
+                                        		for (i = 0; i < thingValues.length; i++) {
+                                        			if (Meat.indexOf(thingValues.rows[i].name) >= 0) {
+                                        				newRow.itemName = thingValues.rows[i].name;
+                                        				newRow.currentQuantity = thingValues.rows[i].value;
+                                        				newRow.maxQuantity = 900;
+                                        				result.AddRow(newRow);
+                                        			}
+                                        		}
+                                        
+                                        
+                                        	}
+                                        } catch (ex) {
+                                        	logger.error("ERROR in GetRoomDataforGrid : " + me.name + " at line " + ex.lineNumber + " : " + ex);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetRoomThingNameandDetails">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        try {
+                                        	var params = {
+                                        		infoTableName: "InfoTable",
+                                        		dataShapeName: "RoomViewGrid.DS"
+                                        	};
+                                        
+                                        	// CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(RoomViewGrid.DS)
+                                        	var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                            
+                                            // result: INFOTABLE dataShape: "RootEntityList"
+                                        var result =  ThingTemplates["VegetablesSection.TT"].GetImplementingThingsWithData();
+                                        
+                                        
+                                        
+                                        } catch (ex) {
+                                        	logger.error("ERROR in GetRoomDataforGrid : " + me.name + " at line " + ex.lineNumeber + " : " + ex);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetRoomTypesList">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        try{
+                                            result = Things["UtilHelperThing"].roomSizes;
+                                        }catch(ex){
+                                            logger.error("ERROR in GetRoomTypesList : " + me.name + " at line " + ex.lineNumeber + " : " + ex);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ImplementedShapes></ImplementedShapes>
+            <ThingProperties></ThingProperties>
+        </Thing>
+    </Things>
+</Entities>

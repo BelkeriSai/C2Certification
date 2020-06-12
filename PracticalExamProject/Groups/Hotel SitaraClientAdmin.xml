@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b103"
+ majorVersion="8"
+ minorVersion="5"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="5"
+ schemaVersion="1054"
+ universal="password">
+    <Groups>
+        <Group
+         description="ClientAdmin User Group for Hotel Sitara Contract"
+         documentationContent=""
+         homeMashup=""
+         name="Hotel SitaraClientAdmin"
+         projectName="PracticalExamProject"
+         scimDisplayName=""
+         scimExternalId=""
+         scimId=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <Members>
+                <Members>
+                    <Member
+                     name="Hotel SitaraClientAdmin"
+                     type="User"></Member>
+                </Members>
+            </Members>
+        </Group>
+    </Groups>
+</Entities>

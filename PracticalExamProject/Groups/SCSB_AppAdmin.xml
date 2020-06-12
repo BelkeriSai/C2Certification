@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b103"
+ majorVersion="8"
+ minorVersion="5"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="5"
+ schemaVersion="1054"
+ universal="password">
+    <Groups>
+        <Group
+         description=""
+         documentationContent=""
+         homeMashup=""
+         name="SCSB_AppAdmin"
+         projectName="PracticalExamProject"
+         scimDisplayName=""
+         scimExternalId=""
+         scimId=""
+         tags="PracticalExamProject_Tag:UserManagement">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <Members>
+                <Members>
+                    <Member
+                     name="Administrator"
+                     type="User"></Member>
+                    <Member
+                     name="ScsbAdmin"
+                     type="User"></Member>
+                </Members>
+            </Members>
+        </Group>
+    </Groups>
+</Entities>

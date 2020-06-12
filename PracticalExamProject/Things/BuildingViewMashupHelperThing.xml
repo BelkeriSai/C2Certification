@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b103"
+ majorVersion="8"
+ minorVersion="5"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="5"
+ schemaVersion="1054"
+ universal="password">
+    <Things>
+        <Thing
+         description=""
+         documentationContent=""
+         effectiveThingPackage="ConfiguredThing"
+         enabled="true"
+         homeMashup=""
+         identifier=""
+         name="BuildingViewMashupHelperThing"
+         projectName="PracticalExamProject"
+         published="false"
+         tags="PracticalExamProject_Tag:MashupHelperThings"
+         thingTemplate="GenericThing"
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetAggregateData">
+                        <ResultType
+                         aspect.dataShape="VegetablesQty.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="contractName"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="location"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetContractList">
+                        <ResultType
+                         aspect.dataShape="ContractDetails.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetCurrentWeatherAndGPS">
+                        <ResultType
+                         aspect.dataShape="CurrentWeatherAndGPS.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="location"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetFruitsQtyAggregate">
+                        <ResultType
+                         aspect.dataShape="FruitsQty.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="contractName"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="location"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetLocationsList">
+                        <ResultType
+                         aspect.dataShape="StorageLocation.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetMeatQtyAggregate">
+                        <ResultType
+                         aspect.dataShape="MeatQty.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="contractName"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="location"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetVegetablesQtyAggregate">
+                        <ResultType
+                         aspect.dataShape="VegetablesQty.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="contractName"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="location"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetWeatherForecastData">
+                        <ResultType
+                         aspect.dataShape="WeatherForecast.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="location"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="test">
+                        <ResultType
+                         baseType="NOTHING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetAggregateData">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        try {
+                                        	var vegetablesThingsData = ThingTemplates["VegetablesSection.TT"].GetImplementingThingsWithData();
+                                        	var params = {
+                                        		infoTableName: "InfoTable",
+                                        		dataShapeName: "VegetablesQty.DS"
+                                        	};
+                                        	// CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(VegetablesQty.DS)
+                                        	var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                        
+                                        	var saladAggregatgeQty = 0;
+                                        	var potatoAggregatgeQty = 0;
+                                        	var tomatoAggregatgeQty = 0;
+                                        	var onionAggregatgeQty = 0;
+                                        	var carrotAggregatgeQty = 0;
+                                        
+                                        	for (i = 0; i < vegetablesThingsData.length; i++) {
+                                        		if ((vegetablesThingsData.rows[i].clientName === contractName) && (vegetablesThingsData.rows[i].location === location)) {
+                                        			saladAggregatgeQty = saladAggregatgeQty + vegetablesThingsData.rows[i].salad;
+                                        			potatoAggregatgeQty = potatoAggregatgeQty + vegetablesThingsData.rows[i].potato;
+                                        			tomatoAggregatgeQty = tomatoAggregatgeQty + vegetablesThingsData.rows[i].tomato;
+                                        			onionAggregatgeQty = onionAggregatgeQty + vegetablesThingsData.rows[i].onion;
+                                        			carrotAggregatgeQty = carrotAggregatgeQty + vegetablesThingsData.rows[i].carrot;
+                                        		}
+                                        	}
+                                        	var newRow = new Object();
+                                        	newRow.tomatoQty = tomatoAggregatgeQty;
+                                        	newRow.potatoQty = potatoAggregatgeQty;
+                                        	newRow.onionQty = onionAggregatgeQty;
+                                        	newRow.carrotQty = carrotAggregatgeQty;
+                                        	newRow.saladQty = saladAggregatgeQty;
+                                        	result.AddRow(newRow);
+                                        } catch (ex) {
+                                        	logger.error("Error in GetVegetablesQtyAggregate : " + me.name + " at Line: " + ex.lineNumber + " " + ex);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetContractList">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        try{
+                                        result = Things["UtilHelperThing"].contractDetails;
+                                        }
+                                        catch (ex) {
+                                        	logger.error("Error in GetLocationsList : " + me.name + " at Line: " + ex.lineNumber + " " + ex);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetCurrentWeatherAndGPS">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        try {
+                                        	// result: INFOTABLE dataShape: "RootEntityList"
+                                        	var weatherData = ThingTemplates["WeatherForecastData.TT"].GetImplementingThingsWithData();
+                                        
+                                        	var params = {
+                                        		infoTableName: "InfoTable",
+                                        		dataShapeName: "CurrentWeatherAndGPS.DS"
+                                        	};
+                                        
+                                        	// CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(CurrentWeatherAndGPS.DS)
+                                        	var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                        
+                                        	for (i = 0; i < weatherData.length; i++) {
+                                        		if (weatherData.rows[i].Location == location) {
+                                        			var newRow = new Object();
+                                        			newRow.Temperature = weatherData.rows[i].temperature;
+                                        			newRow.Humidity = weatherData.rows[i].humidity;
+                                        			newRow.GPS = weatherData.rows[i].GPS;
+                                        			result.AddRow(newRow);
+                                        		}
+                                        	}
+                                        } catch (ex) {
+                                        	logger.error("Error in GetCurrentWeatherAndGPS : " + me.name + " at Line: " + ex.lineNumber + " " + ex);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetFruitsQtyAggregate">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        try {
+                                        	var fruitsThingsData = ThingTemplates["FruitsSection.TT"].GetImplementingThingsWithData();
+                                        	var params = {
+                                        		infoTableName: "InfoTable",
+                                        		dataShapeName: "FruitsQty.DS"
+                                        	};
+                                        	// CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(FruitsQty.DS)
+                                        	var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                        
+                                        	var pearAggregatgeQty = 0;
+                                        	var peachAggregatgeQty = 0;
+                                        	var orangeAggregatgeQty = 0;
+                                        	var appleAggregatgeQty = 0;
+                                        	var bananaAggregatgeQty = 0;
+                                        
+                                        	for (i = 0; i < fruitsThingsData.length; i++) {
+                                        		if ((fruitsThingsData.rows[i].clientName === contractName) && (fruitsThingsData.rows[i].location === location)) {
+                                        			pearAggregatgeQty = pearAggregatgeQty + fruitsThingsData.rows[i].pear;
+                                        			peachAggregatgeQty = peachAggregatgeQty + fruitsThingsData.rows[i].peach;
+                                        			orangeAggregatgeQty = orangeAggregatgeQty + fruitsThingsData.rows[i].orange;
+                                        			appleAggregatgeQty = appleAggregatgeQty + fruitsThingsData.rows[i].apple;
+                                        			bananaAggregatgeQty = bananaAggregatgeQty + fruitsThingsData.rows[i].banana;
+                                        		}
+                                        	}
+                                        	var newRow = new Object();
+                                        	newRow.pearQty = pearAggregatgeQty;
+                                        	newRow.peachQty = peachAggregatgeQty;
+                                        	newRow.orangeQty = orangeAggregatgeQty;
+                                        	newRow.appleQty = appleAggregatgeQty;
+                                        	newRow.bananaQty = bananaAggregatgeQty;
+                                        	result.AddRow(newRow);
+                                        } catch (ex) {
+                                        	logger.error("Error in GetFruitsQtyAggregate : " + me.name + " at Line: " + ex.lineNumber + " " + ex);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetLocationsList">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        try{
+                                        result = Things["UtilHelperThing"].storageLocation;
+                                        }
+                                        catch (ex) {
+                                        	logger.error("Error in GetLocationsList : " + me.name + " at Line: " + ex.lineNumber + " " + ex);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetMeatQtyAggregate">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        try {
+                                        	var meatThingsData = ThingTemplates["MeatSection.TT"].GetImplementingThingsWithData();
+                                        	var params = {
+                                        		infoTableName: "InfoTable",
+                                        		dataShapeName: "MeatQty.DS"
+                                        	};
+                                        	// CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(MeatQty.DS)
+                                        	var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                        
+                                        	var pigAggregatgeQty = 0;
+                                        	var lambAggregatgeQty = 0;
+                                        	var chickenAggregatgeQty = 0;
+                                        	var beefAggregatgeQty = 0;
+                                        	var fishAggregatgeQty = 0;
+                                        
+                                        	for (i = 0; i < meatThingsData.length; i++) {
+                                        		if ((meatThingsData.rows[i].clientName === contractName) && (meatThingsData.rows[i].location === location)) {
+                                        			pigAggregatgeQty = pigAggregatgeQty + meatThingsData.rows[i].pig;
+                                        			lambAggregatgeQty = lambAggregatgeQty + meatThingsData.rows[i].lamb;
+                                        			chickenAggregatgeQty = chickenAggregatgeQty + meatThingsData.rows[i].chicken;
+                                        			beefAggregatgeQty = beefAggregatgeQty + meatThingsData.rows[i].beef;
+                                        			fishAggregatgeQty = fishAggregatgeQty + meatThingsData.rows[i].fish;
+                                        		}
+                                        	}
+                                        	var newRow = new Object();
+                                        	newRow.pigQty = pigAggregatgeQty;
+                                        	newRow.lambQty = lambAggregatgeQty;
+                                        	newRow.chickenQty = chickenAggregatgeQty;
+                                        	newRow.beefQty = beefAggregatgeQty;
+                                        	newRow.fishQty = fishAggregatgeQty;
+                                        	result.AddRow(newRow);
+                                        } catch (ex) {
+                                        	logger.error("Error in GetMeatQtyAggregate : " + me.name + " at Line: " + ex.lineNumber + " " + ex);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetVegetablesQtyAggregate">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        try {
+                                        	var vegetablesThingsData = ThingTemplates["VegetablesSection.TT"].GetImplementingThingsWithData();
+                                        	var params = {
+                                        		infoTableName: "InfoTable",
+                                        		dataShapeName: "VegetablesQty.DS"
+                                        	};
+                                        	// CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(VegetablesQty.DS)
+                                        	var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                        
+                                        	var saladAggregatgeQty = 0;
+                                        	var potatoAggregatgeQty = 0;
+                                        	var tomatoAggregatgeQty = 0;
+                                        	var onionAggregatgeQty = 0;
+                                        	var carrotAggregatgeQty = 0;
+                                        
+                                        	for (i = 0; i < vegetablesThingsData.length; i++) {
+                                        		if ((vegetablesThingsData.rows[i].clientName === contractName) && (vegetablesThingsData.rows[i].location === location)) {
+                                        			saladAggregatgeQty = saladAggregatgeQty + vegetablesThingsData.rows[i].salad;
+                                        			potatoAggregatgeQty = potatoAggregatgeQty + vegetablesThingsData.rows[i].potato;
+                                        			tomatoAggregatgeQty = tomatoAggregatgeQty + vegetablesThingsData.rows[i].tomato;
+                                        			onionAggregatgeQty = onionAggregatgeQty + vegetablesThingsData.rows[i].onion;
+                                        			carrotAggregatgeQty = carrotAggregatgeQty + vegetablesThingsData.rows[i].carrot;
+                                        		}
+                                        	}
+                                        	var newRow = new Object();
+                                        	newRow.tomatoQty = tomatoAggregatgeQty;
+                                        	newRow.potatoQty = potatoAggregatgeQty;
+                                        	newRow.onionQty = onionAggregatgeQty;
+                                        	newRow.carrotQty = carrotAggregatgeQty;
+                                        	newRow.saladQty = saladAggregatgeQty;
+                                        	result.AddRow(newRow);
+                                        } catch (ex) {
+                                        	logger.error("Error in GetVegetablesQtyAggregate : " + me.name + " at Line: " + ex.lineNumber + " " + ex);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetWeatherForecastData">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        try {
+                                        	var params = {
+                                        		infoTableName: "InfoTable",
+                                        		dataShapeName: "WeatherForecast.DS"
+                                        	};
+                                        
+                                        	// CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(WeatherForecast.DS)
+                                        	var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                        
+                                        	var weatherThingsData = ThingTemplates["WeatherForecastData.TT"].GetImplementingThingsWithData();
+                                        	var x;
+                                        	for (i = 0; i < weatherThingsData.length; i++) {
+                                        		if (weatherThingsData.rows[i].Location === location) {
+                                        			x = weatherThingsData.rows[i].name;
+                                        			break;
+                                        		}
+                                        	}
+                                        	var forecastData = Things[x].GetWeatherForecastData();
+                                        	
+                                            var newRow = new Object();
+                                        	newRow.tomorrowTemperature = forecastData.rows[1].Temperature;
+                                        	newRow.dtomorrowTemperature = forecastData.rows[2].Temperature;
+                                        	newRow.tomorrowHumidity = forecastData.rows[1].Humidity;
+                                        	newRow.dtomorrowHumidity = forecastData.rows[2].Humidity;
+                                        	result.AddRow(newRow);
+                                        } catch (ex) {
+                                        	logger.error("Error in test : " + me.name + "at " + ex.lineNumber);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="test">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var vegetablesThingsData =  ThingTemplates["VegetablesSection.TT"].GetImplementingThingsWithData();
+                                        
+                                        var fruitsThingsData =  ThingTemplates["FruitsSection.TT"].GetImplementingThingsWithData();
+                                        
+                                        var meatThingsData =  ThingTemplates["MeatSection.TT"].GetImplementingThingsWithData();
+                                        
+                                        var params = {
+                                            infoTableName : "InfoTable",
+                                            dataShapeName : "RootEntityList"
+                                        };
+                                        
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(RootEntityList)
+                                        var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                        var newRow = new Object();
+                                        for(i=0;i<vegetablesThingsData.length;i++){
+                                            newRow = vegetablesThingsData.rows[i];
+                                            result.AddRow(newRow);
+                                        }
+                                        
+                                        for(i=0;i<fruitsThingsData.length;i++){
+                                            newRow = fruitsThingsData.rows[i];
+                                            result.AddRow(newRow);
+                                        }
+                                        
+                                        for(i=0;i<meatThingsData.length;i++){
+                                            newRow = meatThingsData.rows[i];
+                                            result.AddRow(newRow);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ImplementedShapes></ImplementedShapes>
+            <ThingProperties></ThingProperties>
+        </Thing>
+    </Things>
+</Entities>

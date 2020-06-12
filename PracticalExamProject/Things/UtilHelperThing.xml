@@ -1,0 +1,1004 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b103"
+ majorVersion="8"
+ minorVersion="5"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="5"
+ schemaVersion="1054"
+ universal="password">
+    <Things>
+        <Thing
+         description=""
+         documentationContent=""
+         effectiveThingPackage="ConfiguredThing"
+         enabled="true"
+         homeMashup=""
+         identifier=""
+         name="UtilHelperThing"
+         projectName="PracticalExamProject"
+         published="false"
+         tags="PracticalExamProject_Tag:UtilEntities;PracticalExamProject_Tag:local"
+         thingTemplate="GenericThing"
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.dataShape="ContractDetails.DS"
+                     aspect.isLogged="true"
+                     aspect.isPersistent="true"
+                     baseType="INFOTABLE"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="contractDetails"
+                     ordinal="2"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.dataShape="roomSizes.DS"
+                     aspect.isLogged="true"
+                     aspect.isPersistent="true"
+                     baseType="INFOTABLE"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="roomSizes"
+                     ordinal="5"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.dataShape="RoomTypes.DS"
+                     aspect.isLogged="true"
+                     aspect.isPersistent="true"
+                     baseType="INFOTABLE"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="roomTypes"
+                     ordinal="4"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.dataShape="StorageLocation.DS"
+                     aspect.isLogged="true"
+                     aspect.isPersistent="true"
+                     baseType="INFOTABLE"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="storageLocation"
+                     ordinal="3"></PropertyDefinition>
+                </PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="CreateKepwareJsonFile">
+                        <ResultType
+                         baseType="JSON"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="CreateRoomsAndBindings">
+                        <ResultType
+                         baseType="NOTHING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="RoomThingClient"
+                             ordinal="5"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="RoomThingLocation"
+                             ordinal="6"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="RoomThingName"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="RoomThingSize"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="RoomThingTemplate"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="RoomThingType"
+                             ordinal="3"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="CreateStorageRooms">
+                        <ResultType
+                         baseType="NOTHING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="CreateWeatherThingslocation">
+                        <ResultType
+                         baseType="NOTHING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="JSONConfig">
+                        <ResultType
+                         baseType="JSON"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="PushKepwareConfigFile">
+                        <ResultType
+                         baseType="NOTHING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="RoomsDefinition">
+                        <ResultType
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="SetValueStreams">
+                        <ResultType
+                         baseType="NOTHING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="CreateKepwareJsonFile">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        try {
+                                        	var totalRooms = me.RoomsDefinition();
+                                        	var KepwareConfigJson = me.JSONConfig();
+                                        
+                                        	function createJson(deviceName) {
+                                        		var jsonTemplate = {
+                                        			"common.ALLTYPES_NAME": deviceName,
+                                        			"servermain.MULTIPLE_TYPES_DEVICE_DRIVER": "Simulator",
+                                        			"servermain.DEVICE_MODEL": 0,
+                                        			"servermain.DEVICE_UNIQUE_ID": 178273717,
+                                        			"servermain.DEVICE_ID_FORMAT": 1,
+                                        			"servermain.DEVICE_ID_STRING": "1",
+                                        			"servermain.DEVICE_ID_HEXADECIMAL": 1,
+                                        			"servermain.DEVICE_ID_DECIMAL": 1,
+                                        			"servermain.DEVICE_ID_OCTAL": 1,
+                                        			"servermain.DEVICE_DATA_COLLECTION": true,
+                                        			"servermain.DEVICE_SCAN_MODE": 0,
+                                        			"servermain.DEVICE_SCAN_MODE_RATE_MS": 1000,
+                                        			"servermain.DEVICE_SCAN_MODE_PROVIDE_INITIAL_UPDATES_FROM_CACHE": false,
+                                        			"tags": [{
+                                        					"common.ALLTYPES_NAME": "Humidity",
+                                        					"servermain.TAG_ADDRESS": "USER (1000,75,78,79,80,79,82,79,78,75)",
+                                        					"servermain.TAG_DATA_TYPE": 6,
+                                        					"servermain.TAG_READ_WRITE_ACCESS": 0,
+                                        					"servermain.TAG_SCAN_RATE_MILLISECONDS": 100,
+                                        					"servermain.TAG_SCALING_TYPE": 0
+                                        				},
+                                        				{
+                                        					"common.ALLTYPES_NAME": "Quantity1",
+                                        					"servermain.TAG_ADDRESS": "RANDOM (1000, 1, 50)",
+                                        					"servermain.TAG_DATA_TYPE": 6,
+                                        					"servermain.TAG_READ_WRITE_ACCESS": 0,
+                                        					"servermain.TAG_SCAN_RATE_MILLISECONDS": 100,
+                                        					"servermain.TAG_SCALING_TYPE": 0
+                                        				},
+                                        				{
+                                        					"common.ALLTYPES_NAME": "Quantity2",
+                                        					"servermain.TAG_ADDRESS": "RANDOM (1000, 2, 50)",
+                                        					"servermain.TAG_DATA_TYPE": 6,
+                                        					"servermain.TAG_READ_WRITE_ACCESS": 0,
+                                        					"servermain.TAG_SCAN_RATE_MILLISECONDS": 100,
+                                        					"servermain.TAG_SCALING_TYPE": 0
+                                        				},
+                                        				{
+                                        					"common.ALLTYPES_NAME": "Quantity3",
+                                        					"servermain.TAG_ADDRESS": "RANDOM (1000, 3, 50)",
+                                        					"servermain.TAG_DATA_TYPE": 6,
+                                        					"servermain.TAG_READ_WRITE_ACCESS": 0,
+                                        					"servermain.TAG_SCAN_RATE_MILLISECONDS": 100,
+                                        					"servermain.TAG_SCALING_TYPE": 0
+                                        				},
+                                        				{
+                                        					"common.ALLTYPES_NAME": "Quantity4",
+                                        					"servermain.TAG_ADDRESS": "RANDOM (1000, 4, 50)",
+                                        					"servermain.TAG_DATA_TYPE": 6,
+                                        					"servermain.TAG_READ_WRITE_ACCESS": 0,
+                                        					"servermain.TAG_SCAN_RATE_MILLISECONDS": 100,
+                                        					"servermain.TAG_SCALING_TYPE": 0
+                                        				},
+                                        				{
+                                        					"common.ALLTYPES_NAME": "Quantity5",
+                                        					"servermain.TAG_ADDRESS": "RANDOM (1000, 0, 50)",
+                                        					"servermain.TAG_DATA_TYPE": 6,
+                                        					"servermain.TAG_READ_WRITE_ACCESS": 0,
+                                        					"servermain.TAG_SCAN_RATE_MILLISECONDS": 100,
+                                        					"servermain.TAG_SCALING_TYPE": 0
+                                        				},
+                                        				{
+                                        					"common.ALLTYPES_NAME": "Temperature",
+                                        					"servermain.TAG_ADDRESS": "USER (1000,10,11,12,13,12,14,12,11,10)",
+                                        					"servermain.TAG_DATA_TYPE": 8,
+                                        					"servermain.TAG_READ_WRITE_ACCESS": 0,
+                                        					"servermain.TAG_SCAN_RATE_MILLISECONDS": 100,
+                                        					"servermain.TAG_SCALING_TYPE": 0
+                                        				}
+                                        			]
+                                        		}
+                                        		return jsonTemplate;
+                                        	}
+                                        	for (x = 0; x < totalRooms.length; x++) {
+                                        		var deviceName = totalRooms.rows[x].roomName;
+                                        		var deviceJson = createJson(deviceName);
+                                        		KepwareConfigJson.project.channels[0].devices.push(deviceJson);
+                                        	}
+                                        
+                                        	result = KepwareConfigJson;
+                                        } catch (ex) {
+                                        	logger.error("Error in CreateKepwareJsonFile in " + me.name + " at " + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="CreateRoomsAndBindings">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        try {
+                                        	var params = {
+                                        		name: RoomThingName /* STRING */ ,
+                                        		description: undefined /* STRING */ ,
+                                        		thingTemplateName: RoomThingTemplate /* THINGTEMPLATENAME */ ,
+                                        		tags: undefined /* TAGS */
+                                        	};
+                                        
+                                        	// no return
+                                        	Resources["EntityServices"].CreateThing(params);
+                                        
+                                        	Things[RoomThingName].EnableThing();
+                                        	Things[RoomThingName].RestartThing();
+                                        
+                                        	Things[RoomThingName].clientName = RoomThingClient;
+                                        	Things[RoomThingName].location = RoomThingLocation;
+                                        	Things[RoomThingName].roomType = RoomThingType;
+                                        	Things[RoomThingName].roomSize = RoomThingSize;
+                                        
+                                        	Things[RoomThingName].SetProjectName({
+                                        		projectName: "PracticalExamProject"
+                                        	});
+                                        	Things[RoomThingName].AddTags({
+                                        		tags: "PracticalExamProject_Tag:RoomThings" /* TAGS */
+                                        	});
+                                        
+                                        	// no return
+                                        	Resources["EntityServices"].AddShapeToThing({
+                                        		name: RoomThingName /* THINGNAME */ ,
+                                        		thingShapeName: "IndustrialThingShape" /* THINGSHAPENAME */
+                                        	});
+                                        
+                                        	Things[RoomThingName].IndustrialThing = "KEPServerEX";
+                                        
+                                        	//Remote binding function call
+                                        	SetRemoteBinding(RoomThingName, "humidity", "SmartConnectedBuildings." + RoomThingName + ".Humidity");
+                                        	SetRemoteBinding(RoomThingName, "temperature", "SmartConnectedBuildings." + RoomThingName + ".Temperature");
+                                        	if (RoomThingTemplate == "VegetablesSection.TT") {
+                                        		SetRemoteBinding(RoomThingName, "carrot", "SmartConnectedBuildings." + RoomThingName + ".Quantity1");
+                                        		SetRemoteBinding(RoomThingName, "onion", "SmartConnectedBuildings." + RoomThingName + ".Quantity2");
+                                        		SetRemoteBinding(RoomThingName, "potato", "SmartConnectedBuildings." + RoomThingName + ".Quantity3");
+                                        		SetRemoteBinding(RoomThingName, "salad", "SmartConnectedBuildings." + RoomThingName + ".Quantity4");
+                                        		SetRemoteBinding(RoomThingName, "tomato", "SmartConnectedBuildings." + RoomThingName + ".Quantity5");
+                                        	} else if (RoomThingTemplate == "FruitsSection.TT") {
+                                        		SetRemoteBinding(RoomThingName, "apple", "SmartConnectedBuildings." + RoomThingName + ".Quantity1");
+                                        		SetRemoteBinding(RoomThingName, "banana", "SmartConnectedBuildings." + RoomThingName + ".Quantity2");
+                                        		SetRemoteBinding(RoomThingName, "orange", "SmartConnectedBuildings." + RoomThingName + ".Quantity3");
+                                        		SetRemoteBinding(RoomThingName, "peach", "SmartConnectedBuildings." + RoomThingName + ".Quantity4");
+                                        		SetRemoteBinding(RoomThingName, "pear", "SmartConnectedBuildings." + RoomThingName + ".Quantity5");
+                                        	} else if (RoomThingTemplate == "MeatSection.TT") {
+                                        		SetRemoteBinding(RoomThingName, "beef", "SmartConnectedBuildings." + RoomThingName + ".Quantity1");
+                                        		SetRemoteBinding(RoomThingName, "chicken", "SmartConnectedBuildings." + RoomThingName + ".Quantity2");
+                                        		SetRemoteBinding(RoomThingName, "fish", "SmartConnectedBuildings." + RoomThingName + ".Quantity3");
+                                        		SetRemoteBinding(RoomThingName, "lamb", "SmartConnectedBuildings." + RoomThingName + ".Quantity4");
+                                        		SetRemoteBinding(RoomThingName, "pig", "SmartConnectedBuildings." + RoomThingName + ".Quantity5");
+                                        	}
+                                        } catch (err) {
+                                        	logger.error("Error in CreateRoomsAndBindings in " + me.name + " at " + err.lineNumber + ": " + err);
+                                        	if (Things[RoomThingName]) {
+                                        		var params0 = {
+                                        			name: RoomThingName /* THINGNAME */
+                                        		};
+                                        		Resources["EntityServices"].DeleteThing(params0);
+                                        	}
+                                        }
+                                        
+                                        function SetRemoteBinding(ThingName, PropertyName, tagAddress) {
+                                        	var aspects = {
+                                        		"tagAddress": tagAddress,
+                                        		"scanRate": 1000,
+                                        		"tagType": "Static",
+                                        		"startType": "readEdgeValue",
+                                        		"dataShape": ""
+                                        	};
+                                        
+                                        	Things[ThingName].SetRemotePropertyBinding({
+                                        		propertyName: PropertyName /* STRING */ ,
+                                        		pushThreshold: 0 /* NUMBER */ ,
+                                        		aspects: aspects /* JSON */ ,
+                                        		foldType: undefined /* STRING */ ,
+                                        		sourcePropertyName: undefined /* STRING */ ,
+                                        		timeout: 0 /* INTEGER */ ,
+                                        		pushType: "VALUE" /* STRING */ ,
+                                        		cacheTime: undefined /* INTEGER */
+                                        	});
+                                        	Things[ThingName].RestartThing();
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="CreateStorageRooms">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        try {
+                                            var roomDefinition = me.RoomsDefinition();
+                                            
+                                            for (var x=0; x < roomDefinition.length; x++) {
+                                                var row = roomDefinition.rows[x];
+                                                if(!Things[row.roomName])
+                                                {
+                                                    me.CreateRoomsAndBindings({
+                                                    	RoomThingName: row.roomName /* STRING */,
+                                                    	RoomThingTemplate: row.thingTemplate /* STRING */,
+                                                    	RoomThingType: row.roomType /* STRING */,
+                                                    	RoomThingSize: row.roomSize /* STRING */,
+                                                    	RoomThingClient: row.contractName /* STRING */,
+                                                    	RoomThingLocation: row.location /* STRING */
+                                                    });
+                                                }
+                                            }
+                                        } catch(ex) {
+                                          logger.error("Error in CreateStorageRooms" + me.name + " at " + ex.lineNumber + ": " + ex);   
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="CreateWeatherThingslocation">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        try {
+                                        	var wThingName;
+                                        
+                                        	for (var x = 0; x < me.storageLocation.length; x++) {
+                                        		wThingName = "Weather" + me.storageLocation[x].locationName;
+                                        		if (!(Things[wThingName])) {
+                                        			var params = {
+                                        				name: wThingName /* STRING */ ,
+                                        				description: "Weather Thing for " + me.storageLocation[x].locationName /* STRING */ ,
+                                        				thingTemplateName: "WeatherForecastData.TT" /* THINGTEMPLATENAME */ ,
+                                        				tags: undefined /* TAGS */
+                                        			};
+                                        			Resources["EntityServices"].CreateThing(params);
+                                        			Things[wThingName].EnableThing();
+                                        			Things[wThingName].RestartThing();
+                                        
+                                        			Things[wThingName].SetProjectName({
+                                        				projectName: "PracticalExamProject"
+                                        			});
+                                        			Things[wThingName].AddTags({
+                                        				tags: "PracticalExamProject_Tag:WeatherThings" /* TAGS */
+                                        			});
+                                        			Things[wThingName].Location = me.storageLocation[x].locationName;
+                                        		}
+                                        	}
+                                        } catch (ex) {
+                                        	logger.error("Error in " + me.name + " at " + ex.lineNumber + ": " + ex);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="JSONConfig">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        result = {
+                                        	"project": {
+                                        		"common.ALLTYPES_DESCRIPTION": "Example project utilizing Simulator Driver.",
+                                        		"servermain.PROJECT_TITLE": "Simulation Driver Demo",
+                                        		"channels": [
+                                        			{
+                                        				"common.ALLTYPES_NAME": "SmartConnectedBuildings",
+                                        				"servermain.MULTIPLE_TYPES_DEVICE_DRIVER": "Simulator",
+                                        				"servermain.CHANNEL_DIAGNOSTICS_CAPTURE": false,
+                                        				"servermain.CHANNEL_UNIQUE_ID": 2094320817,
+                                        				"servermain.CHANNEL_WRITE_OPTIMIZATIONS_METHOD": 2,
+                                        				"servermain.CHANNEL_WRITE_OPTIMIZATIONS_DUTY_CYCLE": 10,
+                                        				"servermain.CHANNEL_NON_NORMALIZED_FLOATING_POINT_HANDLING": 0,
+                                        				"simulator.CHANNEL_ITEM_PERSISTENCE": false,
+                                        				"simulator.CHANNEL_ITEM_PERSISTENCE_DATA_FILE": "C:\\ProgramData\\PTC\\ThingWorx Industrial Connectivity\\V8\\Simulator\\SmartConnectedBuildings1.dat",
+                                        				"devices": []
+                                                    }
+                                                    ]
+                                            }
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="PushKepwareConfigFile">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        try {
+                                        	Things["SystemRepository"].SaveJSON({
+                                        		path: 'IndustrialGateway/JsonFile/KepwareConfigSetup1.json' /* STRING */ ,
+                                        		content: me.CreateKepwareJsonFile() /* JSON */
+                                        	});
+                                        	Things["KEPServerEX"].PushConfigToEdge({
+                                        		sourceFileName: 'KepwareConfigSetup1.json' /* STRING */ ,
+                                        		filePassword: undefined /* STRING */ ,
+                                        		sourcePath: 'IndustrialGateway/JsonFile/' /* STRING */
+                                        	});
+                                        } catch (ex) {
+                                        	logger.error("Error in " + me.name + " at " + ex.lineNumber + ": " + ex);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="RoomsDefinition">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        try {
+                                        	var params = {
+                                        		infoTableName: "InfoTable",
+                                        		dataShapeName: "RoomsDefinition.DS"
+                                        	};
+                                        
+                                        	// CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(RoomsDefinition.DS)
+                                        	var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                        
+                                        	for (x in me.contractDetails.rows) {
+                                        		for (y in me.storageLocation.rows) {
+                                        			for (z in me.roomTypes.rows) {
+                                        				for (p in me.roomSizes.rows) {
+                                        					var newRow = new Object();
+                                        					newRow.roomName = me.contractDetails.rows[x].ContractName + me.storageLocation.rows[y].locationName + me.roomTypes.rows[z].roomType + me.roomSizes.rows[p].roomSize;
+                                        					newRow.roomType = me.roomTypes.rows[z].roomType;
+                                        					newRow.roomSize = me.roomSizes.rows[p].roomSize;
+                                        					newRow.contractName = me.contractDetails.rows[x].ContractName;
+                                        					newRow.location = me.storageLocation.rows[y].locationName;
+                                        					newRow.thingTemplate = me.roomTypes.rows[z].roomType + "Section.TT";
+                                        					WeatherThingName = "Weather" + me.storageLocation.rows[y].locationName;
+                                        					result.AddRow(newRow);
+                                        				}
+                                        			}
+                                        		}
+                                        	}
+                                        } catch (ex) {
+                                        	logger.error("Error in " + me.name + " at " + ex.lineNumber + ": " + ex);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="SetValueStreams">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var roomNames = me.RoomsDefinition();
+                                        for (x = 0; x < roomNames.length; x++) {
+                                        	roomName = roomNames.rows[x].roomName;
+                                        	Things[roomName].SetValueStream({
+                                        		name: "RoomThings.VS" /* THINGNAME */
+                                        	});
+                                            location = Things[roomName].location;
+                                            locationJson = Things["WeatherBerlin"].GetCurrentWeatherData({location:location});
+                                            Things[roomName].GPS = locationJson.coord.lat +","+ locationJson.coord.lon +",0";
+                                        }
+                                        var weatherThings = ThingTemplates["WeatherForecastData.TT"].GetImplementingThings();
+                                        
+                                        for (x = 0; x < weatherThings.length; x++) {
+                                        	var weatherThingName = weatherThings.rows[x].name;
+                                        	Things[weatherThingName].SetValueStream({
+                                        		name: "WeatherThings.VS" /* THINGNAME */
+                                        	});
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations>
+                <AlertDefinitions
+                 name="contractDetails"></AlertDefinitions>
+                <AlertDefinitions
+                 name="roomSizes"></AlertDefinitions>
+                <AlertDefinitions
+                 name="roomTypes"></AlertDefinitions>
+                <AlertDefinitions
+                 name="storageLocation"></AlertDefinitions>
+            </AlertConfigurations>
+            <ImplementedShapes></ImplementedShapes>
+            <ThingProperties>
+                <roomSizes>
+                    <Value>
+                        <infoTable>
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition
+                                     aspect.isPrimaryKey="false"
+                                     baseType="STRING"
+                                     description=""
+                                     name="roomSize"
+                                     ordinal="1"></FieldDefinition>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <roomSize>
+                                    <![CDATA[
+                                    Small
+                                    ]]>
+                                    </roomSize>
+                                </Row>
+                                <Row>
+                                    <roomSize>
+                                    <![CDATA[
+                                    Medium
+                                    ]]>
+                                    </roomSize>
+                                </Row>
+                                <Row>
+                                    <roomSize>
+                                    <![CDATA[
+                                    Large
+                                    ]]>
+                                    </roomSize>
+                                </Row>
+                            </Rows>
+                        </infoTable>
+                    </Value>
+                    <Timestamp>2020-06-08T07:19:14.337Z</Timestamp>
+                    <Quality>GOOD</Quality>
+                </roomSizes>
+                <roomTypes>
+                    <Value>
+                        <infoTable>
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition
+                                     aspect.isPrimaryKey="false"
+                                     baseType="STRING"
+                                     description=""
+                                     name="roomType"
+                                     ordinal="1"></FieldDefinition>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <roomType>
+                                    <![CDATA[
+                                    Fruits
+                                    ]]>
+                                    </roomType>
+                                </Row>
+                                <Row>
+                                    <roomType>
+                                    <![CDATA[
+                                    Vegetables
+                                    ]]>
+                                    </roomType>
+                                </Row>
+                                <Row>
+                                    <roomType>
+                                    <![CDATA[
+                                    Meat
+                                    ]]>
+                                    </roomType>
+                                </Row>
+                            </Rows>
+                        </infoTable>
+                    </Value>
+                    <Timestamp>2020-06-08T07:20:42.855Z</Timestamp>
+                    <Quality>GOOD</Quality>
+                </roomTypes>
+                <storageLocation>
+                    <Value>
+                        <infoTable>
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition
+                                     aspect.isPrimaryKey="false"
+                                     baseType="STRING"
+                                     description=""
+                                     name="locationName"
+                                     ordinal="1"></FieldDefinition>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <locationName>
+                                    <![CDATA[
+                                    Berlin
+                                    ]]>
+                                    </locationName>
+                                </Row>
+                                <Row>
+                                    <locationName>
+                                    <![CDATA[
+                                    Madrid
+                                    ]]>
+                                    </locationName>
+                                </Row>
+                                <Row>
+                                    <locationName>
+                                    <![CDATA[
+                                    Paris
+                                    ]]>
+                                    </locationName>
+                                </Row>
+                                <Row>
+                                    <locationName>
+                                    <![CDATA[
+                                    London
+                                    ]]>
+                                    </locationName>
+                                </Row>
+                                <Row>
+                                    <locationName>
+                                    <![CDATA[
+                                    Rome
+                                    ]]>
+                                    </locationName>
+                                </Row>
+                            </Rows>
+                        </infoTable>
+                    </Value>
+                    <Timestamp>2020-06-08T07:23:25.601Z</Timestamp>
+                    <Quality>GOOD</Quality>
+                </storageLocation>
+                <contractDetails>
+                    <Value>
+                        <infoTable>
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition
+                                     aspect.isPrimaryKey="false"
+                                     baseType="STRING"
+                                     description=""
+                                     name="ContractName"
+                                     ordinal="1"></FieldDefinition>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <ContractName>
+                                    <![CDATA[
+                                    Patanjali
+                                    ]]>
+                                    </ContractName>
+                                </Row>
+                                <Row>
+                                    <ContractName>
+                                    <![CDATA[
+                                    ITC
+                                    ]]>
+                                    </ContractName>
+                                </Row>
+                                <Row>
+                                    <ContractName>
+                                    <![CDATA[
+                                    Hotel Sitara
+                                    ]]>
+                                    </ContractName>
+                                </Row>
+                                <Row>
+                                    <ContractName>
+                                    <![CDATA[
+                                    Kritunga
+                                    ]]>
+                                    </ContractName>
+                                </Row>
+                            </Rows>
+                        </infoTable>
+                    </Value>
+                    <Timestamp>2020-06-12T12:28:41.200Z</Timestamp>
+                    <Quality>GOOD</Quality>
+                </contractDetails>
+            </ThingProperties>
+        </Thing>
+    </Things>
+</Entities>

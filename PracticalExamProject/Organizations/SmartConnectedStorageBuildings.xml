@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b103"
+ majorVersion="8"
+ minorVersion="5"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="5"
+ schemaVersion="1054"
+ universal="password">
+    <Organizations>
+        <Organization
+         description=""
+         documentationContent=""
+         homeMashup="BuildingViewScreen.MU"
+         loginButtonStyle=""
+         loginPrompt=""
+         loginResetPassword="false"
+         loginStyle="DefaultFieldsetLabelStyle"
+         mobileMashup=""
+         name="SmartConnectedStorageBuildings"
+         projectName="PracticalExamProject"
+         resetMailContent="&lt;p&gt;[[resetemail.requestmade]]&lt;/p&gt;&#xA;&#xA;&lt;p&gt;[[resetemail.instructions]]&lt;/p&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&lt;p&gt;[[resetemail.helpneeded]]&lt;/p&gt;"
+         resetMailServer=""
+         resetMailSubject="[[resetemail.subject]]"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <loginImage></loginImage>
+            <Connections>
+                <Connection
+                 from=""
+                 to="SmartConnectedStorageBuildings"></Connection>
+                <Connection
+                 from="SmartConnectedStorageBuildings"
+                 to="Patanjali"></Connection>
+                <Connection
+                 from="Patanjali"
+                 to="Patanjali Vegetables Room Managers"></Connection>
+                <Connection
+                 from="Patanjali"
+                 to="Patanjali Fruits Room Managers"></Connection>
+                <Connection
+                 from="Patanjali"
+                 to="Patanjali Meat Room Managers"></Connection>
+                <Connection
+                 from="SmartConnectedStorageBuildings"
+                 to="ITC"></Connection>
+                <Connection
+                 from="ITC"
+                 to="ITC Fruits Room Managers"></Connection>
+                <Connection
+                 from="ITC"
+                 to="ITC Vegetables Room Managers"></Connection>
+                <Connection
+                 from="ITC"
+                 to="ITC Meat Room Managers"></Connection>
+                <Connection
+                 from="SmartConnectedStorageBuildings"
+                 to="Hotel Sitara"></Connection>
+                <Connection
+                 from="Hotel Sitara"
+                 to="Hotel Sitara Fruits Room Managers"></Connection>
+                <Connection
+                 from="Hotel Sitara"
+                 to="Hotel Sitara Vegetables Room Managers"></Connection>
+                <Connection
+                 from="Hotel Sitara"
+                 to="Hotel Sitara Meat Room Managers"></Connection>
+                <Connection
+                 from="SmartConnectedStorageBuildings"
+                 to="Kritunga"></Connection>
+                <Connection
+                 from="Kritunga"
+                 to="Kritunga Fruits Room Managers"></Connection>
+                <Connection
+                 from="Kritunga"
+                 to="Kritunga Vegetables Room Managers"></Connection>
+                <Connection
+                 from="Kritunga"
+                 to="Kritunga Meat Room Managers"></Connection>
+            </Connections>
+            <OrganizationalUnits>
+                <OrganizationalUnit
+                 description=""
+                 name="Hotel Sitara">
+                    <Members>
+                        <Members></Members>
+                    </Members>
+                </OrganizationalUnit>
+                <OrganizationalUnit
+                 description=""
+                 name="Hotel Sitara Fruits Room Managers">
+                    <Members>
+                        <Members></Members>
+                    </Members>
+                </OrganizationalUnit>
+                <OrganizationalUnit
+                 description=""
+                 name="Hotel Sitara Meat Room Managers">
+                    <Members>
+                        <Members></Members>
+                    </Members>
+                </OrganizationalUnit>
+                <OrganizationalUnit
+                 description=""
+                 name="Hotel Sitara Vegetables Room Managers">
+                    <Members>
+                        <Members></Members>
+                    </Members>
+                </OrganizationalUnit>
+                <OrganizationalUnit
+                 description=""
+                 name="ITC">
+                    <Members>
+                        <Members></Members>
+                    </Members>
+                </OrganizationalUnit>
+                <OrganizationalUnit
+                 description=""
+                 name="ITC Fruits Room Managers">
+                    <Members>
+                        <Members></Members>
+                    </Members>
+                </OrganizationalUnit>
+                <OrganizationalUnit
+                 description=""
+                 name="ITC Meat Room Managers">
+                    <Members>
+                        <Members></Members>
+                    </Members>
+                </OrganizationalUnit>
+                <OrganizationalUnit
+                 description=""
+                 name="ITC Vegetables Room Managers">
+                    <Members>
+                        <Members></Members>
+                    </Members>
+                </OrganizationalUnit>
+                <OrganizationalUnit
+                 description=""
+                 name="Kritunga">
+                    <Members>
+                        <Members></Members>
+                    </Members>
+                </OrganizationalUnit>
+                <OrganizationalUnit
+                 description=""
+                 name="Kritunga Fruits Room Managers">
+                    <Members>
+                        <Members></Members>
+                    </Members>
+                </OrganizationalUnit>
+                <OrganizationalUnit
+                 description=""
+                 name="Kritunga Meat Room Managers">
+                    <Members>
+                        <Members></Members>
+                    </Members>
+                </OrganizationalUnit>
+                <OrganizationalUnit
+                 description=""
+                 name="Kritunga Vegetables Room Managers">
+                    <Members>
+                        <Members></Members>
+                    </Members>
+                </OrganizationalUnit>
+                <OrganizationalUnit
+                 description=""
+                 name="Patanjali">
+                    <Members>
+                        <Members>
+                            <Member
+                             name="PatanjaliClientAdmin"
+                             type="Group"></Member>
+                        </Members>
+                    </Members>
+                </OrganizationalUnit>
+                <OrganizationalUnit
+                 description=""
+                 name="Patanjali Fruits Room Managers">
+                    <Members>
+                        <Members>
+                            <Member
+                             name="PatanjaliFruitsRoomManager"
+                             type="Group"></Member>
+                        </Members>
+                    </Members>
+                </OrganizationalUnit>
+                <OrganizationalUnit
+                 description=""
+                 name="Patanjali Meat Room Managers">
+                    <Members>
+                        <Members>
+                            <Member
+                             name="PatanjaliMeatRoomManager"
+                             type="Group"></Member>
+                        </Members>
+                    </Members>
+                </OrganizationalUnit>
+                <OrganizationalUnit
+                 description=""
+                 name="Patanjali Vegetables Room Managers">
+                    <Members>
+                        <Members>
+                            <Member
+                             name="PatanjaliVegetablesRoomManager"
+                             type="Group"></Member>
+                        </Members>
+                    </Members>
+                </OrganizationalUnit>
+                <OrganizationalUnit
+                 description=""
+                 name="SmartConnectedStorageBuildings">
+                    <Members>
+                        <Members>
+                            <Member
+                             name="SCSB_AppAdmin"
+                             type="Group"></Member>
+                        </Members>
+                    </Members>
+                </OrganizationalUnit>
+            </OrganizationalUnits>
+        </Organization>
+    </Organizations>
+</Entities>

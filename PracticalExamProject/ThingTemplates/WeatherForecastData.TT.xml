@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b103"
+ majorVersion="8"
+ minorVersion="5"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="5"
+ schemaVersion="1054"
+ universal="password">
+    <ThingTemplates>
+        <ThingTemplate
+         baseThingTemplate="Timer"
+         description=""
+         documentationContent=""
+         effectiveThingPackage="TimerThing"
+         homeMashup=""
+         name="WeatherForecastData.TT"
+         projectName="PracticalExamProject"
+         tags=""
+         thingPackage=""
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 description="General Settings"
+                 isHidden="true"
+                 isMultiRow="false"
+                 name="Settings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="true"
+                             baseType="BOOLEAN"
+                             description="Automatically enable timer on startup"
+                             name="enabled"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="USERNAME"
+                             description="User context in which to run event handlers"
+                             name="runAsUser"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="60000.0"
+                             baseType="NUMBER"
+                             description="Update rate"
+                             name="updateRate"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <enabled>true</enabled>
+                            <runAsUser>
+                            <![CDATA[
+                            SuperUser
+                            ]]>
+                            </runAsUser>
+                            <updateRate>5000.0</updateRate>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations>
+                <AlertDefinitions
+                 name="forecastHumidity"></AlertDefinitions>
+                <AlertDefinitions
+                 name="forecastTemperature"></AlertDefinitions>
+                <AlertDefinitions
+                 name="GPS"></AlertDefinitions>
+                <AlertDefinitions
+                 name="Location"></AlertDefinitions>
+            </AlertConfigurations>
+            <ThingShape>
+                <PropertyDefinitions>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isPersistent="true"
+                     baseType="NUMBER"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="forecastHumidity"
+                     ordinal="5"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isPersistent="true"
+                     baseType="NUMBER"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="forecastTemperature"
+                     ordinal="4"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isLogged="true"
+                     aspect.isPersistent="true"
+                     baseType="LOCATION"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="GPS"
+                     ordinal="2"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isLogged="true"
+                     aspect.isPersistent="true"
+                     baseType="STRING"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="Location"
+                     ordinal="3"></PropertyDefinition>
+                </PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetCurrentWeatherData">
+                        <ResultType
+                         baseType="JSON"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.isRequired="true"
+                             baseType="STRING"
+                             description=""
+                             name="location"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetWeatherForecastData">
+                        <ResultType
+                         aspect.dataShape="WeatherForcasting.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetWeatherForecastDataUtil">
+                        <ResultType
+                         aspect.dataShape="WeatherForcasting.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="NUMBER"
+                             description=""
+                             name="latitude"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="NUMBER"
+                             description=""
+                             name="longitude"
+                             ordinal="2"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="UpdateCurrentWeather">
+                        <ResultType
+                         baseType="NOTHING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetCurrentWeatherData">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var params = {
+                                        	proxyScheme: undefined /* STRING */,
+                                        	headers: undefined /* JSON */,
+                                        	ignoreSSLErrors: true /* BOOLEAN */,       //  mind this parameter
+                                        	useNTLM: undefined /* BOOLEAN */,
+                                        	workstation: undefined /* STRING */,
+                                        	useProxy: undefined /* BOOLEAN */,
+                                        	withCookies: undefined /* BOOLEAN */,
+                                        	proxyHost: undefined /* STRING */,
+                                        	url: "https://api.openweathermap.org/data/2.5/weather?q="+ location + "&appid=0ddfc0ff2076b4f6f1808701b33760f6" /* STRING */,
+                                        	timeout: undefined /* NUMBER */,
+                                        	proxyPort: undefined /* INTEGER */,
+                                        	password: undefined /* STRING */,
+                                        	domain: undefined /* STRING */,
+                                        	username: undefined /* STRING */
+                                        };
+                                        
+                                        // result: JSON
+                                        var result = Resources["ContentLoaderFunctions"].GetJSON(params);
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetWeatherForecastData">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        try {
+                                        	var lat = me.GPS.latitude;
+                                        	var lon = me.GPS.longitude;
+                                        	var params = {
+                                        		proxyScheme: undefined /* STRING */ ,
+                                        		headers: undefined /* JSON */ ,
+                                        		ignoreSSLErrors: true /* BOOLEAN */ ,
+                                        		useNTLM: undefined /* BOOLEAN */ ,
+                                        		workstation: undefined /* STRING */ ,
+                                        		useProxy: undefined /* BOOLEAN */ ,
+                                        		withCookies: undefined /* BOOLEAN */ ,
+                                        		proxyHost: undefined /* STRING */ ,
+                                        		url: "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude=minutely,hourly&appid=0ddfc0ff2076b4f6f1808701b33760f6" /* STRING */ ,
+                                        		timeout: undefined /* NUMBER */ ,
+                                        		proxyPort: undefined /* INTEGER */ ,
+                                        		password: undefined /* STRING */ ,
+                                        		domain: undefined /* STRING */ ,
+                                        		username: undefined /* STRING */
+                                        	};
+                                        	// result: JSON
+                                        	var JsonData = Resources["ContentLoaderFunctions"].GetJSON(params);
+                                        
+                                        	var params = {
+                                        		infoTableName: "InfoTable",
+                                        		dataShapeName: "WeatherForcasting.DS"
+                                        	};
+                                        	// CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(WeatherForcasting.DS)
+                                        	var WeatherForcastingData = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                        
+                                        	for (x = 0; x < JsonData.daily.length; x++) {
+                                        		// WeatherForcasting.DS entry object
+                                        		var newEntry = new Object();
+                                        		newEntry.Date = JsonData.daily[x].dt; // DATETIME
+                                        		newEntry.minTemp = JsonData.daily[x].temp.min; // NUMBER
+                                        		newEntry.Humidity = JsonData.daily[x].humidity; // NUMBER
+                                        		newEntry.maxTemp = JsonData.daily[x].temp.max; // NUMBER
+                                        		newEntry.Temperature = ((JsonData.daily[x].temp.max + JsonData.daily[x].temp.min) / 2) - 273.15; // NUMBER
+                                        		WeatherForcastingData.AddRow(newEntry);
+                                        	}
+                                        	result = WeatherForcastingData;
+                                        } catch (err) {
+                                        	logger.error("Service error in GetWeatherForcasting in " + me.name + " at " + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetWeatherForecastDataUtil">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        try {
+                                        	var lat = latitude;
+                                        	var lon = longitude;
+                                        	var params = {
+                                        		proxyScheme: undefined /* STRING */ ,
+                                        		headers: undefined /* JSON */ ,
+                                        		ignoreSSLErrors: true /* BOOLEAN */ ,
+                                        		useNTLM: undefined /* BOOLEAN */ ,
+                                        		workstation: undefined /* STRING */ ,
+                                        		useProxy: undefined /* BOOLEAN */ ,
+                                        		withCookies: undefined /* BOOLEAN */ ,
+                                        		proxyHost: undefined /* STRING */ ,
+                                        		url: "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude=minutely,hourly&appid=0ddfc0ff2076b4f6f1808701b33760f6" /* STRING */ ,
+                                        		timeout: undefined /* NUMBER */ ,
+                                        		proxyPort: undefined /* INTEGER */ ,
+                                        		password: undefined /* STRING */ ,
+                                        		domain: undefined /* STRING */ ,
+                                        		username: undefined /* STRING */
+                                        	};
+                                        	// result: JSON
+                                        	var JsonData = Resources["ContentLoaderFunctions"].GetJSON(params);
+                                        
+                                        	var params = {
+                                        		infoTableName: "InfoTable",
+                                        		dataShapeName: "WeatherForcasting.DS"
+                                        	};
+                                        	// CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(WeatherForcasting.DS)
+                                        	var WeatherForcastingData = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                        
+                                        	for (x = 0; x < JsonData.daily.length; x++) {
+                                        		// WeatherForcasting.DS entry object
+                                        		var newEntry = new Object();
+                                        		newEntry.Date = JsonData.daily[x].dt; // DATETIME
+                                        		newEntry.minTemp = JsonData.daily[x].temp.min; // NUMBER
+                                        		newEntry.Humidity = JsonData.daily[x].humidity; // NUMBER
+                                        		newEntry.maxTemp = JsonData.daily[x].temp.max; // NUMBER
+                                        		newEntry.Temperature = ((JsonData.daily[x].temp.max + JsonData.daily[x].temp.min) / 2); // NUMBER
+                                        		WeatherForcastingData.AddRow(newEntry);
+                                        	}
+                                        	result = WeatherForcastingData;
+                                        } catch (err) {
+                                        	logger.error("Service error in GetWeatherForcasting in " + me.name + " at " + err.lineNumber + ": " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="UpdateCurrentWeather">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var currentWeatherJson = me.GetCurrentWeatherData({
+                                        	location: me.Location /* STRING */
+                                        });
+                                        me.temperature = currentWeatherJson.main.temp - 273.15;
+                                        me.humidity = currentWeatherJson.main.humidity;
+                                        me.GPS = currentWeatherJson.coord.lat +","+ currentWeatherJson.coord.lon +",0";
+                                        logger.warn("Service Executed");
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions>
+                    <Subscription
+                     description=""
+                     enabled="true"
+                     eventName="Timer"
+                     name="CheckWeatherUpdate"
+                     source=""
+                     sourceProperty=""
+                     sourceType="Thing">
+                        <ServiceImplementation
+                         description=""
+                         handlerName="Script"
+                         name="CheckWeatherUpdate">
+                            <ConfigurationTables>
+                                <ConfigurationTable
+                                 description=""
+                                 isMultiRow="false"
+                                 name="Script"
+                                 ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition
+                                             baseType="STRING"
+                                             description="code"
+                                             name="code"
+                                             ordinal="0"></FieldDefinition>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code>
+                                            <![CDATA[
+                                            me.UpdateCurrentWeather();
+                                            ]]>
+                                            </code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                </Subscriptions>
+            </ThingShape>
+            <ImplementedShapes>
+                <ImplementedShape
+                 name="WeatherProperties.TS"
+                 type="ThingShape"></ImplementedShape>
+            </ImplementedShapes>
+            <SharedConfigurationTables></SharedConfigurationTables>
+            <InstanceDesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </InstanceDesignTimePermissions>
+            <InstanceRunTimePermissions></InstanceRunTimePermissions>
+            <InstanceVisibilityPermissions>
+                <Visibility></Visibility>
+            </InstanceVisibilityPermissions>
+        </ThingTemplate>
+    </ThingTemplates>
+</Entities>
